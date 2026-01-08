@@ -1,285 +1,601 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kanugula Rahul – AML & KYC Analyst</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kanugula Rahul – AML & KYC Analyst with 1.10 yrs transaction-monitoring, CDD/EDD, sanctions-screening expertise.">
-  <style>
-    :root {
-      --bg: #0b0c0d;
-      --surface: rgba(22, 27, 34, 0.65);
-      --border: rgba(255, 255, 255, 0.08);
-      --primary: #22d3ee;
-      --text: #c9d1d9;
-      --muted: #8b949e;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    /* animated mesh gradient */
-    .mesh {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background: radial-gradient(at 20% 20%, #0ff 0%, transparent 50%),
-                  radial-gradient(at 80% 80%, #f0f 0%, transparent 50%),
-                  radial-gradient(at 50% 50%, #00f 0%, transparent 50%);
-      filter: blur(120px);
-      animation: rotate 20s linear infinite;
-    }
-    @keyframes rotate {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    header {
-      padding: 5rem 1.5rem 3rem;
-      text-align: center;
-      position: relative;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -1px;
-    }
-    #type-writer {
-      font-size: 1.15rem;
-      color: var(--muted);
-      margin-top: .25rem;
-      min-height: 1.5rem;
-    }
-    .badge {
-      display: inline-block;
-      background: var(--primary);
-      color: #000;
-      padding: .35rem .9rem;
-      border-radius: 999px;
-      font-size: .8rem;
-      font-weight: 600;
-      margin-top: 1.25rem;
-      cursor: pointer;
-      border: none;
-    }
-    section {
-      max-width: 880px;
-      margin: auto;
-      padding: 3rem 1.5rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-    section.reveal {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h2 {
-      font-size: 1.45rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-      border-left: 3px solid var(--primary);
-      padding-left: .75rem;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: .65rem;
-    }
-    .skill {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: .55rem .75rem;
-      border-radius: 6px;
-      font-size: .85rem;
-      text-align: center;
-      transition: background .2s;
-    }
-    .skill:hover {
-      background: #010409;
-      border-color: var(--primary);
-    }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.75rem;
-      margin-bottom: 1.25rem;
-      transition: border-color .2s;
-    }
-    .card:hover {
-      border-color: var(--primary);
-    }
-    .card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: .35rem;
-    }
-    .date {
-      font-size: .85rem;
-      color: var(--muted);
-      margin-bottom: .75rem;
-    }
-    ul {
-      margin-left: 1.25rem;
-    }
-    .cert-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .65rem;
-    }
-    .cert {
-      background: #003543;
-      border: 1px solid var(--primary);
-      padding: .4rem .8rem;
-      border-radius: 999px;
-      font-size: .8rem;
-      transition: background .2s;
-    }
-    .cert:hover {
-      background: #004c5a;
-    }
-    footer {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      font-size: .8rem;
-      color: var(--muted);
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Kanugula - Cybersecurity Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff" fill-opacity="0.1" points="0,1000 1000,0 1000,1000"/><polygon fill="%23ffffff" fill-opacity="0.1" points="0,0 1000,1000 0,1000"/></svg>');
+            background-size: cover;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero .name {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin: 30px 0;
+            animation: slideInRight 1s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero .subtitle {
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 0.9; }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: bounceIn 2s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            60% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .about-content h3 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .about-content p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .contact h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .contact h3 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .contact > p {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .contact-info {
+            margin: 40px 0;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .contact-info strong {
+            color: #667eea;
+        }
+
+        .social-links {
+            margin-top: 50px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 1.1em;
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3em;
+            }
+            
+            .hero .name {
+                font-size: 2.5em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.4em;
+            }
+            
+            .section-title {
+                font-size: 2.5em;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            
+            .social-links a {
+                display: block;
+                margin: 10px auto;
+                max-width: 200px;
+            }
+        }
+
+        /* Particle effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: particle-float 15s infinite linear;
+        }
+
+        @keyframes particle-float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="mesh"></div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">RK</div>
+        </div>
+    </nav>
 
-  <header>
-    <h1>Kanugula Rahul</h1>
-    <div id="type-writer"></div>
-    <button class="badge" onclick="copyEmail()">Copy email</button>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1>HI!</h1>
+            <div class="name">I am KANUGULA RAHUL</div>
+            <div class="subtitle">Cybersecurity Analyst</div>
+            <a href="https://github.com/kanugula-rahul" class="btn">Visit My Github Projects</a>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>Professional Summary</h2>
-    <p>
-      Analytical AML & KYC professional with 1 year 10 months of hands-on experience in transaction monitoring, customer due diligence (CDD), enhanced due diligence (EDD), and sanctions screening.  
-      Proven ability to investigate suspicious activity alerts, ensure FATF & OFAC compliance, and deliver 100 % data-accurate reports within tight SLAs.  
-      Recognized with Best Employee Award for maintaining quality standards and driving regulatory alignment across cross-functional teams.
-    </p>
-  </section>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Who Am I?</h2>
+            <div class="about-content fade-in">
+                <h3>About Me</h3>
+                <p>I am a Cybersecurity Analyst with a strong foundation in security operations, risk analysis, and policy-driven investigations. I have completed the Google Cybersecurity Professional Certificate and Cyber Security 101 (TryHackMe), and I continuously build hands-on experience through SOC-focused labs involving log analysis, threat detection, and incident response fundamentals..</p>
+                <p>My areas of interest include SIEM monitoring, phishing analysis, security alert triage, and threat investigation. I am a disciplined, self-motivated learner who consistently upskills through labs, projects, and security platforms while building a strong cybersecurity portfolio. I am seeking an opportunity within a SOC or cybersecurity operations team where I can contribute effectively, strengthen defensive capabilities, and continue growing as a security professional.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="skills">
-    <h2>Core Competencies</h2>
-    <div class="skills-grid">
-      <div class="skill">AML</div>
-      <div class="skill">KYC</div>
-      <div class="skill">Transaction Monitoring</div>
-      <div class="skill">CDD / EDD</div>
-      <div class="skill">Suspicious Activity Reporting</div>
-      <div class="skill">Sanctions Screening</div>
-      <div class="skill">FATF Standards</div>
-      <div class="skill">OFAC Compliance</div>
-      <div class="skill">Lexis Nexis</div>
-      <div class="skill">Risk Assessment</div>
-      <div class="skill">Ownership Structure Analysis</div>
-      <div class="skill">Regulatory Reporting</div>
-    </div>
-  </section>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">What I Did?</h2>
+            <h3 style="text-align: center; color: #667eea; margin-bottom: 40px; font-size: 2em;" class="fade-in">Experience</h3>
+            <div class="Experience-grid">
+                <div class="Experience-card fade-in">
+                    <h3>Senior Associate Wipro · Full-time Mar 2023 - Jan 2025 · 1 yr 11 months, Nanakramguda, Hyderabad · On-site</h3>
+                    	<p> Performed CDD & EDD reviews for high-risk clients, analysing ownership structures and transaction patterns to detect potential suspicious activity. </p>
+			<p> Investigated and escalated AML monitoring alerts, ensuring adherence to SLA timelines and 100 % data accuracy.</p>
+			<p>Conducted sanctions screening against OFAC, EU, and UN lists; resolved potential matches using risk-based judgment.</p>
+			<p>Collaborated with compliance officers to prepare and present AML/KYC findings, supporting regulatory adherence and management decision-making.</p>
+			<p>Provided training and mentoring to new analysts on CDD, EDD, and evolving regulatory updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Senior AML & KYC Analyst – Wipro Limited</h3>
-      <p class="date">Mar 2023 – Jan 2025 · Hyderabad</p>
-      <ul>
-        <li>Performed CDD & EDD reviews for high-risk clients, analysing ownership structures and transaction patterns to detect potential suspicious activity.</li>
-        <li>Investigated and escalated AML monitoring alerts, ensuring adherence to SLA timelines and 100 % data accuracy.</li>
-        <li>Conducted sanctions screening against OFAC, EU, and UN lists; resolved potential matches using risk-based judgement.</li>
-        <li>Collaborated with compliance officers to prepare and present AML/KYC findings, supporting regulatory adherence and management decision-making.</li>
-        <li>Provided training and mentoring to new analysts on CDD, EDD, and evolving regulatory updates.</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Want to work with me?</h2>
+            <h3 style="color: #667eea; margin-bottom: 30px;" class="fade-in">Contact Me</h3>
+            <p style="font-size: 1.3em; color: #666; margin-bottom: 50px;" class="fade-in">Always feel Free to Contact me</p>
+            
+            <div class="contact-info fade-in">
+                <p><strong>Location:</strong> Hyderabad, India</p>
+                <p><strong>Phone:</strong> +919121974181</p>
+                <p><strong>Email:</strong> kanugularahul81@gmail.com</p>
+            </div>
 
-  <section id="certs">
-    <h2>Certifications & Credentials</h2>
-    <div class="cert-row">
-      <a class="cert" href="https://tryhackme.com/certificate/THM-YADQQU5QT9" target="_blank" rel="noopener">CompTIA PenTest+</a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/professional-cert/LV6WRUEGZ91T?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof" target="_blank" rel="noopener">Google Cybersecurity Pro</a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/verify/WZSGNZZXRKLU" target="_blank" rel="noopener">Cisco SOC Operator</a>
-      <a class="cert" href="https://tryhackme.com/certificate/THM-3UMA74X3O9" target="_blank" rel="noopener">TryHackMe SOC Level 1</a>
-    </div>
-  </section>
+            <div class="social-links fade-in">
+                <a href="https://github.com/kanugula-rahul" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/kanugula-rahul-3102b02b0/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://twitter.com/rahulkanugula" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <h3>Bachelor of Computer Applications (BCA)</h3>
-      <p>Masterji Degree & PG College, Warangal · 2019 – 2022</p>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 @ Rahul Kanugula. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email: <a id="email" href="mailto:kanugularahul81@gmail.com">kanugularahul81@gmail.com</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/kanugula-rahul-3102b02b0/" target="_blank">linkedin.com/in/kanugula-rahul-3102b02b0</a><br>
-      Mobile: +91 91219 74181
-    </p>
-  </section>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-  <footer>
-    &copy; <span id="yr"></span> Kanugula Rahul – AML & KYC Analyst
-  </footer>
+        // Fade in animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-  <script>
-    // type-writer hero
-    const txt = "AML & KYC Analyst | 1.10 yrs transaction-monitoring & compliance expertise";
-    let i = 0;
-    const speed = 55;
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("type-writer").textContent += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    window.addEventListener("DOMContentLoaded", typeWriter);
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
 
-    // reveal on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => entry.target.classList.toggle("reveal", entry.isIntersecting));
-    }, { threshold: 0.2 });
-    document.querySelectorAll("section").forEach(sec => observer.observe(sec));
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
 
-    // copy email
-    function copyEmail() {
-      const email = document.getElementById("email").textContent;
-      navigator.clipboard.writeText(email).then(() => alert("Email copied to clipboard"));
-    }
+        // Particle animation
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            document.getElementById('particles').appendChild(particle);
 
-    // current year
-    document.getElementById("yr").textContent = new Date().getFullYear();
-  </script>
+            setTimeout(() => {
+                particle.remove();
+            }, 25000);
+        }
 
+        // Create particles continuously
+        setInterval(createParticle, 300);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add typing effect to hero text
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effects after page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const nameElement = document.querySelector('.hero .name');
+                const originalText = nameElement.textContent;
+                typeWriter(nameElement, originalText, 100);
+            }, 1000);
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+
+        // Add hover effects to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>
